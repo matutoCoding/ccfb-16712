@@ -1,0 +1,23 @@
+{
+  "name": "bird-glass-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "浏览器端建筑玻璃防鸟撞评估系统,TypeScript + WebGPU + IndexedDB",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 8765",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "preview": "vite preview --host 127.0.0.1 --port 8765",
+    "check:fresnel": "node scripts/verify-fresnel.ts",
+    "smoke:core": "node --loader ./scripts/ts-extension-loader.mjs scripts/smoke-core.ts",
+    "smoke:obj": "node --loader ./scripts/ts-extension-loader.mjs scripts/smoke-obj.ts",
+    "smoke:report": "node --loader ./scripts/ts-extension-loader.mjs scripts/smoke-report.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@webgpu/types": "^0.1.66",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12"
+  }
+}
